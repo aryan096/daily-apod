@@ -17,3 +17,9 @@ Follow these steps -
 
     0 8 * * * /home/user/<path to cb_apod>
 
+## Building apod binary 
+
+If you need to rebuild the binary for some reason, get Golang and run - 
+
+    go build 
+
