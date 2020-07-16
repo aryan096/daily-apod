@@ -38,7 +38,7 @@ func getJSON(url string, target interface{}) error {
 
 func main() {
 
-	url := "https://api.nasa.gov/planetary/apod?api_key=lmkpX63zD6oG70WGFswSig6GY6pze0TtemdkciYz&date=2020-07-15"
+	url := "https://api.nasa.gov/planetary/apod?api_key=lmkpX63zD6oG70WGFswSig6GY6pze0TtemdkciYz"
 	apod := new(Apod)
 
 	var myClient = &http.Client{Timeout: 10 * time.Second}
