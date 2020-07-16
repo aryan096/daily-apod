@@ -13,14 +13,14 @@ import (
 
 // Apod struct
 type Apod struct {
-	copyright       string `json:"copyright"`       //copyright
-	date            string `json:"date"`            // date
-	explanation     string `json:"explanation"`     // explanation
-	hdurl           string `json:"hdurl"`           // hdurl
-	media_type      string `json:"media_type"`      // media_type
-	service_version string `json:"service_version"` //service_version
-	title           string `json:"title"`           // title
-	url             string `json:"url"`             // url
+	Copyright       string `json:"copyright"`       //copyright
+	Date            string `json:"date"`            // date
+	Explanation     string `json:"explanation"`     // explanation
+	Hdurl           string `json:"hdurl"`           // hdurl
+	Media_type      string `json:"media_type"`      // media_type
+	Service_version string `json:"service_version"` //service_version
+	Title           string `json:"title"`           // title
+	Url             string `json:"url"`             // url
 }
 
 var myClient = &http.Client{Timeout: 10 * time.Second}
@@ -67,10 +67,8 @@ func main() {
 		log.Fatal(jsonErr)
 	}
 
-	fmt.Println(apod.url)
-
 	// get image from apod URL
-	imageresp, err := http.Get(apod.url)
+	imageresp, err := http.Get(apod.Hdurl)
 	if err != nil {
 		log.Fatalln(err)
 	}

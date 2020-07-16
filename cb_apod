@@ -1,0 +1,9 @@
+#!/bin/bash 
+
+# Script will call ./apod to get the APOD of today and then set the xfce4 background to it 
+
+./apod
+
+xfconf-query -c xfce4-desktop \
+-p /backdrop/screen0/monitor0/workspace0/last-image \
+-s "/home/asriva11/projects/apod/apod_image.jpg"
